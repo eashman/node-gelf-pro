@@ -5,21 +5,34 @@
   "types": "./lib/definition.d.ts",
   "author": "Kanstantsin Kamkou <kkamkou@gmail.com>",
   "description": "The Graylog Extended Log Format for the Node.js",
-  "keywords": ["graylog", "gelf", "logging", "udp", "tcp", "tls", "ssl"],
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/kkamkou/node-gelf-pro.git"
+  "keywords": [
+    "graylog",
+    "gelf",
+    "logging",
+    "udp",
+    "tcp",
+    "tls",
+    "ssl"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kkamkou/node-gelf-pro.git"
   },
-  "bugs" : {
-    "url" : "https://github.com/kkamkou/node-gelf-pro/issues"
+  "bugs": {
+    "url": "https://github.com/kkamkou/node-gelf-pro/issues"
   },
-  "license" : "MIT",
+  "license": "MIT",
   "scripts": {
     "test": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "dependencies": {
     "async": "2.5.0",
-    "lodash": "4.17.4"
+    "crypto": "0.0.3",
+    "dgram": "^1.0.1",
+    "lodash": "4.17.4",
+    "net": "^1.0.2",
+    "path": "^0.12.7",
+    "tls": "0.0.1"
   },
   "devDependencies": {
     "coveralls": "^2.13.1",
